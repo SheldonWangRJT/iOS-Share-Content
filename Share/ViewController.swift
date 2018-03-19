@@ -12,11 +12,9 @@ class ViewController: UIViewController, UIDocumentInteractionControllerDelegate 
     
     final private let stringWithLink = "Please download this app here in App Store: https://google.com"
     
-
     @IBAction func shareStringTapped(_ sender: Any) {
         let activityController = UIActivityViewController(activityItems: [stringWithLink], applicationActivities: nil)
-        
-        
+         
         activityController.completionWithItemsHandler = { (nil, completed, _, error) in
             if completed {
                 print("completed")
@@ -24,7 +22,6 @@ class ViewController: UIViewController, UIDocumentInteractionControllerDelegate 
                 print("cancled")
             }
         }
-        
         present(activityController, animated: true) {
             print("presented")
         }
