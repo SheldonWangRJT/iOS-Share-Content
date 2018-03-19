@@ -48,7 +48,6 @@ class ViewController: UIViewController, UIDocumentInteractionControllerDelegate 
         let controller = UIDocumentInteractionController(url: url)
         controller.delegate = self
         controller.presentPreview(animated: true)
-
     }
     
     func documentInteractionControllerViewControllerForPreview(_ controller: UIDocumentInteractionController) -> UIViewController {
